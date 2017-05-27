@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../lib/jvid.js"></script>
+</head>
+<body>
+	<h1 id="test">TEST</h1>
+</body>
+<script type="text/javascript">
+	document.getElementById('test').onclick = function(){
+		// _jvid.console(this.innerHTML);
+		// _jvid.console();
+		_JD.console(_JD.differentArr([1,2,3,4,7,8,9],[34,4,4,5,6,7,8,3]));
+		console.log('-----------1,2,34,5,6,9')
+		_JD.console(_JD.pickSameItem([1,2,3,4,7,8,9],[3,4,4,4,5,6,7,8]));
+		console.log('-----------3,4,7,8')
+		_JD.console(_JD.cutSame([3,4,4,4,5,6,7,8]))
+		console.log('------------3,4,5,6,7,8');
+		// console.log(_JD.cutSame(12));
+		// console.log(_JD.numFormat('w3242345667589807123456'))
+		console.log(_JD.numFormat('32423.45667589807123456'))
+		_JD.getData({
+			url:'http://api.tigerz.nz/tigerspring/rest/getHotWords/en',
+			data:'',
+			success: cb
+		})
+	}
+	function cb(data) {
+		console.log(data)
+	}
+</script>
+</html>
